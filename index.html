@@ -2,36 +2,224 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>試聴サンプル</title>
+  <title>アルバム試聴サイト</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    h2 { margin-bottom: 0.5em; }
-    .track { margin-bottom: 1.5em; }
+    body { 
+      font-family: 'Arial', sans-serif; 
+      padding: 20px; 
+      background-color: #f5f5f5;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    
+    h1 { 
+      margin: 0;
+      font-size: 2.5em;
+    }
+    
+    .subtitle {
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+    
+    .albums-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    
+    .album {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+    
+    .album-title {
+      font-size: 1.8em;
+      color: #333;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 10px;
+    }
+    
+    .album-info {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .track { 
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: #fafafa;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .track-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    
+    audio {
+      width: 100%;
+      margin-top: 5px;
+    }
+    
+    @media (max-width: 768px) {
+      .albums-container {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <h2>試聴サンプル</h2>
+  <header>
+    <h1>アルバム試聴サイト</h1>
+    <div class="subtitle">イベント限定販売アルバム</div>
+  </header>
 
-  <div class="track">
-    <p>Track 1 - Title A</p>
-    <audio controls preload="none">
-      <source src="nonane.mp3" type="audio/mpeg">
-      お使いのブラウザはaudioタグに対応していません。
-    </audio>
-  </div>
+  <div class="albums-container">
+    <!-- アルバムA -->
+    <div class="album">
+      <h2 class="album-title">アルバムA</h2>
+      <div class="album-info">
+        <p><strong>収録曲数:</strong> 8曲</p>
+        <p><strong>価格:</strong> ¥2,000（税込）</p>
+        <p><strong>発売日:</strong> イベント会場限定</p>
+      </div>
+      
+      <div class="track">
+        <div class="track-title">01. オープニング</div>
+        <audio controls preload="none">
+          <source src="album_a_track01.mp3" type="audio/mpeg">
+          お使いのブラウザはaudioタグに対応していません。
+        </audio>
+      </div>
 
-  <div class="track">
-    <p>Track 2 - Title B</p>
-    <audio controls preload="none">
-      <source src="bacon.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      <div class="track">
+        <div class="track-title">02. 青い空の下で</div>
+        <audio controls preload="none">
+          <source src="album_a_track02.mp3" type="audio/mpeg">
+        </audio>
+      </div>
 
-  <div class="track">
-    <p>Track 3 - Title C</p>
-    <audio controls preload="none">
-      <source src="rinne.mp3" type="audio/mpeg">
-    </audio>
+      <div class="track">
+        <div class="track-title">03. 夜明けのメロディー</div>
+        <audio controls preload="none">
+          <source src="album_a_track03.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">04. 風の歌</div>
+        <audio controls preload="none">
+          <source src="album_a_track04.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">05. 心の扉</div>
+        <audio controls preload="none">
+          <source src="album_a_track05.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">06. 虹色の夢</div>
+        <audio controls preload="none">
+          <source src="album_a_track06.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">07. 星降る夜に</div>
+        <audio controls preload="none">
+          <source src="album_a_track07.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">08. エンディング</div>
+        <audio controls preload="none">
+          <source src="album_a_track08.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+    <!-- アルバムB -->
+    <div class="album">
+      <h2 class="album-title">アルバムB</h2>
+      <div class="album-info">
+        <p><strong>収録曲数:</strong> 7曲</p>
+        <p><strong>価格:</strong> ¥1,800（税込）</p>
+        <p><strong>発売日:</strong> イベント会場限定</p>
+      </div>
+      
+      <div class="track">
+        <div class="track-title">01. 新しい始まり</div>
+        <audio controls preload="none">
+          <source src="album_b_track01.mp3" type="audio/mpeg">
+          お使いのブラウザはaudioタグに対応していません。
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">02. 思い出のカフェ</div>
+        <audio controls preload="none">
+          <source src="album_b_track02.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">03. 雨上がりの街</div>
+        <audio controls preload="none">
+          <source src="album_b_track03.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">04. 夕日のサンバ</div>
+        <audio controls preload="none">
+          <source src="album_b_track04.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">05. 深夜のラジオ</div>
+        <audio controls preload="none">
+          <source src="album_b_track05.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">06. 桜散る頃</div>
+        <audio controls preload="none">
+          <source src="album_b_track06.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="track">
+        <div class="track-title">07. ありがとう</div>
+        <audio controls preload="none">
+          <source src="album_b_track07.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
   </div>
 </body>
 </html>
+
